@@ -5,7 +5,8 @@ import {
   DashboardOutlined,
   PlayCircleOutlined,
   SwapRightOutlined,
-  EditOutlined
+  EditOutlined,
+  ScheduleOutlined
 } from '@ant-design/icons'
 
 import styles from './Menu.module.css'
@@ -16,13 +17,14 @@ import ProjectPage from 'components/App/ProjectPages'
  * subscribers use to navigate the portal:
  * - `Home` - name to be used when referencing the `/` route
  * - `Button` - name to be used when referencing the `/button` route
+ * - `ProductivityTracker` - name to be used when referencing the `/productivity` route
  * - `Samples` - name to be used to house the submenus `Page 01` and `Page 02`
  * - `Page 01` - name to be used when referencing the `/01` route
  * - `Page 02` - name to be used when referencing the `/02` route
  * - `none` - name to be used as default. Never actually intended to be given
  * as a valid menu option
  */
-export type MenuTabName = 'Home' | 'Quiz' | 'Button' | 'Samples' | 'Page 01' | 'Page 02' | 'none'
+export type MenuTabName = 'Home' | 'Quiz' | 'Button' | 'ProductivityTracker' | 'Samples' | 'Page 01' | 'Page 02' | 'none'
 
 interface MenuProps {
   active: MenuTabName
@@ -33,6 +35,7 @@ interface MenuProps {
  * Renders the menu allowing the user to efficiently navigate the site
  * @prop `active` - the `menuTabName` of the user's active tab
  * @prop `isMobile` - true iff the user is on mobile
+ * @returns Navigation shell with page content.
  */
 const Menu: React.FC<MenuProps> = props => {
   const topMenuRoutes = useTopMenuRoutes()
@@ -123,6 +126,10 @@ function useTopMenuRoutes (): MenuTab[] {
       name: 'Button',
       onClick: () => navigate(ProjectPage.Button),
       icon: <PlayCircleOutlined style={{ fontSize: 22 }} />
+    }, {
+      name: 'ProductivityTracker',
+      onClick: () => navigate(ProjectPage.ProductivityTracker),
+      icon: <ScheduleOutlined style={{ fontSize: 22 }} />
     }, {
       name: 'Samples',
       onClick: () => {},

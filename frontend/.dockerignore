@@ -1,0 +1,4 @@
+# Exclude local install and build artifacts from the frontend Docker context.
+node_modules
+dist
+coverage

@@ -1,0 +1,27 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    ports:
+      - "4000:4000"
+    environment:
+      # These flow straight into the backend summary and search services.
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANTHROPIC_MODEL: ${ANTHROPIC_MODEL:-claude-haiku-4-5}
+      PRODUCTIVITY_VECTOR_DIMENSION: ${PRODUCTIVITY_VECTOR_DIMENSION:-64}
+      PRODUCTIVITY_SEARCH_RESULT_LIMIT: ${PRODUCTIVITY_SEARCH_RESULT_LIMIT:-5}
+      PRODUCTIVITY_SEARCH_MIN_SCORE: ${PRODUCTIVITY_SEARCH_MIN_SCORE:-0}
+    volumes:
+      # Persist runtime task, summary, and search-index JSON outside the container.
+      - ./backend/server/data:/app/server/data
+
+  frontend:
+    build:
+      context: ./frontend
+    ports:
+      - "5173:5173"
+    environment:
+      # The browser should talk to the backend exposed on the host machine.
+      VITE_GRAPHQL_API_URL: http://localhost:4000/graphql
+    depends_on:
+      - backend

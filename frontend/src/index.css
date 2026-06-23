@@ -50,6 +50,23 @@
   --text20: hsl(0deg, 0%, 20%);
   --text30: hsl(0deg, 0%, 30%);
   --text40: hsl(0deg, 0%, 40%);
+
+  /* Productivity tracker refresh */
+  /* Used Codex to borrow Ready.net styling for the productivity tracker page. */
+  --readyBg: #f7f7f8;
+  --readySurface: #fff;
+  --readySurfaceMuted: #f0f4ff;
+  --readyBorder: #d7d7e0;
+  --readyBorderSoft: #e9ecf7;
+  --readyInk: #100b27;
+  --readyMuted: #6d6f88;
+  --readyAccent: #795df9;
+  --readyAccentDark: #6d3fee;
+  --readyAccentSoft: rgb(121 93 249 / 12%);
+  --readyShadow: 0 3px 4px rgb(236 236 236);
+  --readyFocusRing: 0 0 0 4px rgb(91 77 246 / 16%);
+  --readyRadius: 8px;
+  --readyPanelRadius: 14px;
 }
 
 :any-link {
@@ -58,12 +75,22 @@
 
 body {
   margin: 0;
-  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--black);
+  background: var(--readyBg);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: none;
+  box-shadow: var(--readyFocusRing);
 }
 
 code {

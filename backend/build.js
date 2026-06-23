@@ -1,7 +1,14 @@
-require('esbuild').build({
-  entryPoints: ['server/index.ts'],
-  bundle: true,
-  platform: 'node',
-  external: ['pg-native', 'better-sqlite3', 'mysql2', 'oracledb', 'sqlite3', 'tedious', 'mysql', 'pg-query-stream', 'assert', 'fs', 'os', 'https', 'http', 'stream', 'tty', 'zlib', 'timers', 'path', 'crypto', 'dns', 'module', 'process', 'http2', 'child_process'],
-  outfile: 'build/index.js'
-}).catch(() => process.exit(1))
+const { spawnSync } = require('child_process')
+
+/**
+ * Builds the backend as a real compiled directory tree so runtime modules that
+ * scan `server/entities` continue to work in Docker and local builds.
+ */
+const result = spawnSync('npx', ['tsc', '--project', 'tsconfig.json'], {
+  stdio: 'inherit',
+  cwd: process.cwd()
+})
+
+if (result.status !== 0) {
+  process.exit(result.status ?? 1)
+}

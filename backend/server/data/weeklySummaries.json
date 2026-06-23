@@ -1,0 +1,97 @@
+[
+  {
+    "weekStart": "2026-06-01",
+    "weekEnd": "2026-06-07",
+    "summaryParagraph": "June opened with a strong execution week centered on coding. Product work moved forward early, and the mix of planning, research, and admin stayed contained enough that deep work still led the schedule.",
+    "suggestions": [
+      "Protect early-week build time: Keep Monday and Wednesday clear for implementation-heavy work while momentum is highest.",
+      "Keep coordination lightweight: Continue limiting meetings and admin work so they support execution instead of crowding it out.",
+      "Capture repeatable UI patterns: Turn this week’s successful implementation choices into reusable notes for later iterations."
+    ],
+    "generatedAt": "2026-06-07T18:30:00.000Z",
+    "taskSignature": "1:2026-06-01T09:00:00.000Z|2:2026-06-01T11:00:00.000Z|3:2026-06-02T10:00:00.000Z|4:2026-06-03T13:00:00.000Z|5:2026-06-04T14:00:00.000Z|6:2026-06-05T15:00:00.000Z|7:2026-06-05T16:00:00.000Z",
+    "metrics": {
+      "taskCount": 7,
+      "totalHours": 13,
+      "averageFocusLevel": 7.1,
+      "topCategory": "coding",
+      "busiestDay": "Monday"
+    }
+  },
+  {
+    "weekStart": "2026-06-08",
+    "weekEnd": "2026-06-14",
+    "summaryParagraph": "This week skewed toward meetings and admin follow-through. Work kept moving, but the heavier coordination load pulled focus down and left less room for uninterrupted implementation time.",
+    "suggestions": [
+      "Batch coordination work: Group meetings and admin follow-ups into tighter windows to create at least one protected focus block.",
+      "Front-load the hardest task: Put your most technical work before collaboration begins so lower-focus work does not consume the whole day.",
+      "Trim low-value check-ins: Shorten or combine recurring meetings that do not directly unblock execution."
+    ],
+    "generatedAt": "2026-06-14T18:30:00.000Z",
+    "taskSignature": "10:2026-06-09T14:00:00.000Z|11:2026-06-10T09:00:00.000Z|12:2026-06-11T13:00:00.000Z|13:2026-06-12T11:00:00.000Z|14:2026-06-12T15:00:00.000Z|15:2026-06-13T12:00:00.000Z|8:2026-06-08T10:00:00.000Z|9:2026-06-09T11:00:00.000Z",
+    "metrics": {
+      "taskCount": 8,
+      "totalHours": 11.5,
+      "averageFocusLevel": 4.4,
+      "topCategory": "meeting",
+      "busiestDay": "Tuesday"
+    }
+  },
+  {
+    "weekStart": "2026-06-15",
+    "weekEnd": "2026-06-21",
+    "summaryParagraph": "This was the clearest high-output week of the month. Coding dominated the workload, and a long weekend deep-work block helped push meaningful product work across the finish line without losing momentum during the weekdays.",
+    "suggestions": [
+      "Repeat the weekend deep-work setup: Recreate the conditions that made the Saturday session productive whenever a large implementation push is needed.",
+      "Protect high-focus coding time: Keep your biggest technical tasks anchored to the same focused windows that worked this week.",
+      "Use lighter weekdays for support work: Keep meetings and prep tasks small so they do not dilute the momentum from deep implementation sessions."
+    ],
+    "generatedAt": "2026-06-21T18:30:00.000Z",
+    "taskSignature": "16:2026-06-15T10:00:00.000Z|17:2026-06-16T12:00:00.000Z|18:2026-06-17T13:00:00.000Z|19:2026-06-18T15:00:00.000Z|20:2026-06-19T11:00:00.000Z|21:2026-06-20T10:00:00.000Z|22:2026-06-21T14:00:00.000Z",
+    "metrics": {
+      "taskCount": 7,
+      "totalHours": 15.5,
+      "averageFocusLevel": 7.3,
+      "topCategory": "coding",
+      "busiestDay": "Saturday"
+    }
+  },
+  {
+    "weekStart": "2026-06-22",
+    "weekEnd": "2026-06-28",
+    "summaryParagraph": "This week was more mixed and maintenance-heavy. Research, planning, and admin all showed up, which kept progress steady, but the workload felt more fragmented than the previous week.",
+    "suggestions": [
+      "Cluster similar work together: Group research and admin tasks into dedicated blocks so context switching happens less often.",
+      "Reserve one larger build window: Even in a mixed week, keep at least one uninterrupted session for hands-on product work.",
+      "Use Friday for synthesis: End the week by consolidating findings and decisions instead of scattering small follow-ups."
+    ],
+    "generatedAt": "2026-06-28T18:30:00.000Z",
+    "taskSignature": "23:2026-06-22T10:00:00.000Z|24:2026-06-23T11:00:00.000Z|25:2026-06-23T15:00:00.000Z|26:2026-06-24T12:00:00.000Z|27:2026-06-25T14:00:00.000Z|28:2026-06-26T11:00:00.000Z|29:2026-06-26T16:00:00.000Z|30:2026-06-28T18:00:00.000Z",
+    "metrics": {
+      "taskCount": 8,
+      "totalHours": 12,
+      "averageFocusLevel": 5.8,
+      "topCategory": "admin",
+      "busiestDay": "Tuesday"
+    }
+  },
+  {
+    "weekStart": "2026-06-29",
+    "weekEnd": "2026-07-05",
+    "summaryParagraph": "The month closed with a short planning-focused week. Even with only two June workdays in the reporting window, you wrapped up roadmap and review work with solid focus and a clean handoff into the next sprint.",
+    "suggestions": [
+      "Keep closeout work structured: Use the same end-of-month checklist approach whenever you need a clean transition between planning cycles.",
+      "Turn roadmap notes into next actions: Follow short planning weeks with clear build-ready tasks so momentum carries forward.",
+      "Preserve review time: Keep a small end-of-month reflection block because it surfaced useful cleanup work without dominating the week."
+    ],
+    "generatedAt": "2026-07-05T18:30:00.000Z",
+    "taskSignature": "31:2026-06-29T10:00:00.000Z|32:2026-06-30T12:00:00.000Z|33:2026-06-30T16:00:00.000Z",
+    "metrics": {
+      "taskCount": 3,
+      "totalHours": 5.5,
+      "averageFocusLevel": 7,
+      "topCategory": "planning",
+      "busiestDay": "Tuesday"
+    }
+  }
+]

@@ -1,0 +1,277 @@
+/* Shared create/edit form styling for logging completed productivity tasks. */
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  color: var(--readyInk);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 8px 0 4px;
+}
+
+.headerCopy {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 720px;
+}
+
+.title {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.05;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--readyInk);
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--readyMuted);
+}
+
+.headerControls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.backLink,
+.primaryButton,
+.secondaryButton,
+.deleteButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: var(--readyRadius);
+  border: 1px solid var(--readyBorder);
+  background: var(--readySurface);
+  color: var(--readyInk);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 140ms ease, background-color 140ms ease, color 140ms ease;
+}
+
+.backLink:hover,
+.primaryButton:hover,
+.secondaryButton:hover,
+.deleteButton:hover {
+  border-color: var(--readyInk);
+  background: var(--readySurfaceMuted);
+  color: var(--readyInk);
+}
+
+.deleteButton {
+  border-color: #f0d1d1;
+  background: #fff8f8;
+  color: #9c2d2d;
+}
+
+.deleteButton:hover {
+  border-color: #c55252;
+  background: #fff0f0;
+  color: #8b1f1f;
+}
+
+.stage {
+  border: 1px solid var(--readyBorder);
+  border-radius: var(--readyPanelRadius);
+  background: var(--readySurface);
+  box-shadow: var(--readyShadow);
+  overflow: hidden;
+}
+
+.stageHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--readyBorderSoft);
+  background: #fafcff;
+}
+
+.panelLabel,
+.metaLabel,
+.fieldLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--readyMuted);
+}
+
+.panelLabel {
+  margin: 0 0 4px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 500;
+  color: var(--readyInk);
+}
+
+.sectionCopy {
+  margin: 8px 0 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--readyMuted);
+  max-width: 760px;
+}
+
+.headerBadge {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--readyBorder);
+  border-radius: var(--readyRadius);
+  background: var(--readySurfaceMuted);
+  color: var(--readyMuted);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.errorMessage,
+.successMessage {
+  margin: 16px;
+  padding: 16px;
+  border-radius: var(--readyRadius);
+  border: 1px solid var(--readyBorderSoft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.successMessage {
+  background: #fafcff;
+  color: var(--readyMuted);
+}
+
+.errorMessage {
+  color: #9c2d2d;
+  background: #fff8f8;
+  border-color: #f0d1d1;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.fieldHint,
+.fieldError {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.fieldHint {
+  color: var(--readyMuted);
+}
+
+.fieldError {
+  color: #9c2d2d;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  border: 1px solid var(--readyBorder);
+  border-radius: var(--readyRadius);
+  background: var(--readySurface);
+  color: var(--readyInk);
+  font: inherit;
+  transition: border-color 140ms ease, background-color 140ms ease, box-shadow 140ms ease;
+}
+
+.input {
+  height: 40px;
+  padding: 0 12px;
+}
+
+.textarea {
+  min-height: 132px;
+  padding: 12px;
+  resize: vertical;
+}
+
+.inputError {
+  border-color: #d46a6a;
+  box-shadow: 0 0 0 3px rgb(212 106 106 / 12%);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding-top: 4px;
+}
+
+@media screen and (max-width: 900px) {
+  .header,
+  .stageHeader {
+    flex-direction: column;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .headerControls {
+    width: 100%;
+  }
+
+  .backLink {
+    width: 100%;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .primaryButton,
+  .secondaryButton,
+  .deleteButton {
+    width: 100%;
+  }
+}

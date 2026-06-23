@@ -109,6 +109,10 @@
   "ts-standard": {
     "globals": [
       "fetch"
+    ],
+    "ignore": [
+      "dist",
+      "coverage"
     ]
   },
   "babel": {

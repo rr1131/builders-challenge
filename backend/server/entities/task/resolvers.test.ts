@@ -92,6 +92,22 @@ function seedWeeklySummaries (summaries: Array<ReturnType<typeof buildWeeklySumm
  * @param overrides Partial values to customize the summary.
  * @returns Weekly summary fixture.
  */
+interface ResolverTestWeeklySummary {
+  weekStart: string
+  weekEnd: string
+  summaryParagraph: string
+  suggestions: string[]
+  generatedAt: string
+  taskSignature: string
+  metrics: {
+    taskCount: number
+    totalHours: number
+    averageFocusLevel: number
+    topCategory: string
+    busiestDay: string
+  }
+}
+
 function buildWeeklySummary (overrides: Partial<{
   weekStart: string
   weekEnd: string
@@ -106,21 +122,7 @@ function buildWeeklySummary (overrides: Partial<{
     topCategory: string
     busiestDay: string
   }
-}> = {}): {
-    weekStart: string
-    weekEnd: string
-    summaryParagraph: string
-    suggestions: string[]
-    generatedAt: string
-    taskSignature: string
-    metrics: {
-      taskCount: number
-      totalHours: number
-      averageFocusLevel: number
-      topCategory: string
-      busiestDay: string
-    }
-  } {
+}> = {}): ResolverTestWeeklySummary {
   return {
     weekStart: '2026-06-15',
     weekEnd: '2026-06-21',

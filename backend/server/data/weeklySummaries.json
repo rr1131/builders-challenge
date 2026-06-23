@@ -1,5 +1,24 @@
 [
   {
+    "weekStart": "2026-06-22",
+    "weekEnd": "2026-06-28",
+    "summaryParagraph": "This week you completed 8 tasks across 12 hours with a solid average focus level of 5.8. Administrative work dominated your output, accounting for three tasks including README cleanup, bug triage, and inbox management. Tuesday was your busiest day, and you demonstrated strong focus on higher-value activities like portfolio planning (7/10 focus) and prototype development (7/10 focus). However, your weekend inbox sweep showed notably lower engagement (3/10 focus), suggesting end-of-week fatigue. Overall, you maintained consistent productivity with a good balance between research, planning, coding, and administrative duties.",
+    "suggestions": [
+      "Batch administrative tasks earlier in the week: Group bug triage, README updates, and inbox management into dedicated blocks on Monday or Tuesday when focus levels are higher, rather than spreading them across the week.",
+      "Schedule deep work on high-impact coding tasks mid-week: Reserve Wednesday and Thursday for complex work like prototype development when your energy is peak, protecting these slots from meetings and interruptions.",
+      "Establish a Friday cutoff for admin work: Move weekend inbox sweeps to Friday afternoon with a time limit to prevent low-focus weekend tasks and create a cleaner mental break."
+    ],
+    "generatedAt": "2026-06-23T23:20:20.156Z",
+    "taskSignature": "23:2026-06-22T10:00:00.000Z|24:2026-06-23T11:00:00.000Z|25:2026-06-23T15:00:00.000Z|26:2026-06-24T12:00:00.000Z|27:2026-06-25T14:00:00.000Z|28:2026-06-26T11:00:00.000Z|29:2026-06-26T16:00:00.000Z|30:2026-06-28T18:00:00.000Z",
+    "metrics": {
+      "taskCount": 8,
+      "totalHours": 12,
+      "averageFocusLevel": 5.8,
+      "topCategory": "admin",
+      "busiestDay": "Tuesday"
+    }
+  },
+  {
     "weekStart": "2026-06-01",
     "weekEnd": "2026-06-07",
     "summaryParagraph": "June opened with a strong execution week centered on coding. Product work moved forward early, and the mix of planning, research, and admin stayed contained enough that deep work still led the schedule.",
@@ -54,25 +73,6 @@
       "averageFocusLevel": 7.3,
       "topCategory": "coding",
       "busiestDay": "Saturday"
-    }
-  },
-  {
-    "weekStart": "2026-06-22",
-    "weekEnd": "2026-06-28",
-    "summaryParagraph": "This week was more mixed and maintenance-heavy. Research, planning, and admin all showed up, which kept progress steady, but the workload felt more fragmented than the previous week.",
-    "suggestions": [
-      "Cluster similar work together: Group research and admin tasks into dedicated blocks so context switching happens less often.",
-      "Reserve one larger build window: Even in a mixed week, keep at least one uninterrupted session for hands-on product work.",
-      "Use Friday for synthesis: End the week by consolidating findings and decisions instead of scattering small follow-ups."
-    ],
-    "generatedAt": "2026-06-28T18:30:00.000Z",
-    "taskSignature": "23:2026-06-22T10:00:00.000Z|24:2026-06-23T11:00:00.000Z|25:2026-06-23T15:00:00.000Z|26:2026-06-24T12:00:00.000Z|27:2026-06-25T14:00:00.000Z|28:2026-06-26T11:00:00.000Z|29:2026-06-26T16:00:00.000Z|30:2026-06-28T18:00:00.000Z",
-    "metrics": {
-      "taskCount": 8,
-      "totalHours": 12,
-      "averageFocusLevel": 5.8,
-      "topCategory": "admin",
-      "busiestDay": "Tuesday"
     }
   },
   {

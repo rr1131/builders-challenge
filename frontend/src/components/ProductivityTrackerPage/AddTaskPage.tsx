@@ -458,9 +458,9 @@ function buildRefetchQueries (dateValues: Array<string | undefined>): PureQueryO
   })
 
   return Array.from(rangesByKey.values()).flatMap(range => ([
-      { query: GET_TASKS_QUERY, variables: range },
-      { query: GET_WEEKLY_SUMMARY_QUERY, variables: range }
-    ]))
+    { query: GET_TASKS_QUERY, variables: range },
+    { query: GET_WEEKLY_SUMMARY_QUERY, variables: range }
+  ]))
 }
 
 export default AddTaskPage

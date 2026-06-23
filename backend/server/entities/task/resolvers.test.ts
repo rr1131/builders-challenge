@@ -106,7 +106,21 @@ function buildWeeklySummary (overrides: Partial<{
     topCategory: string
     busiestDay: string
   }
-}> = {}) {
+}> = {}): {
+    weekStart: string
+    weekEnd: string
+    summaryParagraph: string
+    suggestions: string[]
+    generatedAt: string
+    taskSignature: string
+    metrics: {
+      taskCount: number
+      totalHours: number
+      averageFocusLevel: number
+      topCategory: string
+      busiestDay: string
+    }
+  } {
   return {
     weekStart: '2026-06-15',
     weekEnd: '2026-06-21',

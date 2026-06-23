@@ -1245,7 +1245,7 @@ function buildSummary (overrides: Partial<Record<string, any>> = {}): Record<str
  */
 function buildTaskSignature (tasks: Array<Record<string, any>>): string {
   return tasks
-    .map(task => `${task.id}:${task.updatedAt ?? ''}`)
+    .map(task => `${String(task.id)}:${String(task.updatedAt ?? '')}`)
     .sort((left, right) => left.localeCompare(right))
     .join('|')
 }

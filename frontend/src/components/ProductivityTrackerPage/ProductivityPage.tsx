@@ -238,7 +238,7 @@ const ProductivityPage: React.FC = () => {
 
   const chartDays = React.useMemo<ChartDay[]>(() => {
     // Each chart bar is built from stacked segments so the chart and tooltip
-    // can give visibility into how that day's time was distributed. 
+    // can give visibility into how that day's time was distributed.
     return weekDates.map((date, index) => {
       const dateKey = formatDateInput(date)
       const tasksForDay = visibleTasks.filter(task => task.finishDate === dateKey)
@@ -258,7 +258,7 @@ const ProductivityPage: React.FC = () => {
   const maxChartHours = React.useMemo(() => Math.max(...chartDays.map(day => day.totalHours), 0), [chartDays])
 
   const calendarDays = React.useMemo<CalendarDayGroup[]>(() => {
-    // Calendar mode is for raw task visibility so users can see what they actually did each day. 
+    // Calendar mode is for raw task visibility so users can see what they actually did each day.
     return weekDates.map((date, index) => {
       const dateKey = formatDateInput(date)
 

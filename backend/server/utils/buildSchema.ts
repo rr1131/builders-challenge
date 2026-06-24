@@ -11,7 +11,7 @@ import type { GraphQLSchema } from 'graphql'
  */
 export default async function buildSchema (): Promise<GraphQLSchema | undefined> {
   try {
-    const entitiesPath = path.join(__dirname, './server/entities')
+    const entitiesPath = path.resolve(__dirname, '../entities')
     const entityDirs = await fs.promises.readdir(entitiesPath)
 
     const subschemas = []
@@ -24,11 +24,13 @@ export default async function buildSchema (): Promise<GraphQLSchema | undefined>
 
       const typeDefs = await import(typeDefsPath)
       const resolvers = await import(resolversPath)
+      const resolvedTypeDefs = typeDefs.default?.default ?? typeDefs.default ?? typeDefs
+      const resolvedResolvers = resolvers.default?.default ?? resolvers.default ?? resolvers
 
       subschemas.push({
         schema: makeExecutableSchema({
-          typeDefs: typeDefs.default.default,
-          resolvers: resolvers.default.default
+          typeDefs: resolvedTypeDefs,
+          resolvers: resolvedResolvers
         })
       })
     }

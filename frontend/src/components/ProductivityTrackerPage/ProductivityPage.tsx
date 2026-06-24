@@ -98,8 +98,8 @@ const focusBucketOrder: FocusBucket[] = ['low', 'medium', 'high']
 const categoryColors: Record<TaskCategory, string> = {
   coding: '#795df9',
   planning: '#53b89e',
-  meeting: '#4b8de8',
-  research: '#399b85',
+  meeting: '#eb29aaff',
+  research: '#eae73dff',
   admin: '#ff7c7c',
   other: '#8493a3'
 }
@@ -112,8 +112,6 @@ const focusColors: Record<FocusBucket, string> = {
 
 const summarySearchDiscoveryQuery = 'week'
 
-// The landing tracker page combines task capture, week navigation, charting,
-// summary generation, and historical search inside one workflow.
 /**
  * Renders the main productivity tracker dashboard.
  *
@@ -240,7 +238,7 @@ const ProductivityPage: React.FC = () => {
 
   const chartDays = React.useMemo<ChartDay[]>(() => {
     // Each chart bar is built from stacked segments so the chart and tooltip
-    // can both explain how that day’s time was distributed.
+    // can give visibility into how that day's time was distributed. 
     return weekDates.map((date, index) => {
       const dateKey = formatDateInput(date)
       const tasksForDay = visibleTasks.filter(task => task.finishDate === dateKey)
@@ -260,8 +258,7 @@ const ProductivityPage: React.FC = () => {
   const maxChartHours = React.useMemo(() => Math.max(...chartDays.map(day => day.totalHours), 0), [chartDays])
 
   const calendarDays = React.useMemo<CalendarDayGroup[]>(() => {
-    // Calendar mode keeps a simpler grouped structure because it renders tasks
-    // directly instead of collapsing them into chart segments first.
+    // Calendar mode is for raw task visibility so users can see what they actually did each day. 
     return weekDates.map((date, index) => {
       const dateKey = formatDateInput(date)
 
@@ -915,7 +912,6 @@ const ProductivityPage: React.FC = () => {
   )
 }
 
-// The chart stacks only the slices that are currently visible in the chosen filter mode.
 /**
  * Builds the stacked chart segments for one day based on the active filter
  * mode and visible filters.
@@ -967,7 +963,6 @@ function buildChartSegments (
     .filter(segment => segment.hours > 0)
 }
 
-// Category tie-breaking stays deterministic so the same task mix always surfaces the same label.
 /**
  * Finds the dominant category in a task subset.
  *
@@ -989,7 +984,6 @@ function getTopCategory (tasks: TaskRecord[]): string | null {
   })[0]?.[0] ?? null
 }
 
-// Toggling keeps the tokens ordered so the filter rail never jumps around visually.
 /**
  * Toggles one value in a multi-select filter while preserving the canonical
  * display order of the selected items.

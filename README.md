@@ -1,3 +1,8 @@
+# Deprecated Submission Link
+
+This fork has been superseded by the standalone private repository submitted on June 24 2026.
+Please review the updated repository link sent by email.
+
 # builders-challenge
 
 Welcome to my submission! 
